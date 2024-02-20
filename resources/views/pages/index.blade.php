@@ -7,7 +7,9 @@
     <ol>
         @foreach ($comics as $comic)
             <li> 
-                {{ $comic -> title }}
+                <a href="{{ route('show', $comic -> id) }}">
+                    {{ $comic -> title }}
+                </a>   
             </li>
         @endforeach
     </ol>

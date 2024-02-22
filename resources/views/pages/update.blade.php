@@ -3,7 +3,9 @@
     <title>Update</title>
 @endsection
 @section('content')
+
     <h1>Update Comic</h1>
+
     @if ($errors->any())
         <div class="alert alert-danger">
             <ul>
@@ -13,6 +15,7 @@
             </ul>
         </div>
     @endif
+
     <div class="container">
         <form action="{{route('update', $comics -> id)}}" method="POST">
 

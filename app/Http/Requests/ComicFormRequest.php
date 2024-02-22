@@ -13,7 +13,7 @@ class ComicFormRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -24,7 +24,7 @@ class ComicFormRequest extends FormRequest
     public function rules()
     {
         return [
-            'title' => 'required|string|min:3|max:50',
+            'title' => 'required|string|min:3|max:200',
             'description' => 'nullable|string|max:300',
             'price' => 'required|decimal:0,2'
         ];
@@ -33,7 +33,7 @@ class ComicFormRequest extends FormRequest
     public function messages() {
 
         return [
-            'title.required' => 'Il titolo non può essere vuoto',
+            'title.required' => "Il titolo non puo' essere vuoto",
             'title.string' => 'Il titolo deve essere una stringa',
             'title.min' => 'Il titolo deve avere almeno 3 caratteri',
             'title.max' => 'Il titolo deve avere massimo 50 caratteri',

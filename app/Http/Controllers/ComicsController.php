@@ -82,8 +82,8 @@ class ComicsController extends Controller
      */
     public function update(ComicFormRequest $request, $id)
     {
-        $comics = Comic::find($id);
         $data = $request -> all();
+        $comics = Comic::find($id);
 
         $comics -> title = $data['title'];
         $comics -> description = $data['description'];

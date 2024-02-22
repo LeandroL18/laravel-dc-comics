@@ -3,7 +3,9 @@
     <title>Create</title>
 @endsection
 @section('content')
+
     <h1>New Comic</h1>
+
     @if ($errors->any())
         <div class="alert alert-danger">
             <ul>
@@ -13,6 +15,7 @@
             </ul>
         </div>
     @endif
+    
     <div class="container">
         <form action="{{route('store')}}" method="POST">
 
